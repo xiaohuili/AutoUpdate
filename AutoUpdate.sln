@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutoUpdate", "AutoUpdate.vcxproj", "{CBF915DD-73F9-D5B9-A845-0D34125937AC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutoUpdate", "AutoUpdate.vcxproj", "{73E309BD-660B-F0DF-0813-3F261F594CD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CBF915DD-73F9-D5B9-A845-0D34125937AC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{CBF915DD-73F9-D5B9-A845-0D34125937AC}.Debug|Win32.Build.0 = Debug|Win32
-		{CBF915DD-73F9-D5B9-A845-0D34125937AC}.Release|Win32.ActiveCfg = Release|Win32
-		{CBF915DD-73F9-D5B9-A845-0D34125937AC}.Release|Win32.Build.0 = Release|Win32
+		{73E309BD-660B-F0DF-0813-3F261F594CD7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{73E309BD-660B-F0DF-0813-3F261F594CD7}.Debug|Win32.Build.0 = Debug|Win32
+		{73E309BD-660B-F0DF-0813-3F261F594CD7}.Release|Win32.ActiveCfg = Release|Win32
+		{73E309BD-660B-F0DF-0813-3F261F594CD7}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
