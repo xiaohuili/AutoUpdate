@@ -17,13 +17,13 @@
 #include "MultiLanguage.h"
 
 // 命令行参数名
-#define PARA_KEY_APP_NAME "/AppName="
-#define PARA_KEY_CURRENTVERSION "/CurrentVersion="
-#define PARA_KEY_CHECKURL "/CheckURL="
-#define PARA_KEY_NOTIFYWINDOW "/NotifyWindow="
-#define PARA_KEY_NOTIFYWINDOWTITLE "/NotifyWindowTitle="
-#define PARA_KEY_NOTIFYFINISH "/NotifyFinish="
-#define PARA_KEY_SILENCE "/Silence="
+#define PARA_KEY_APP_NAME "AppName="
+#define PARA_KEY_CURRENTVERSION "CurrentVersion="
+#define PARA_KEY_CHECKURL "CheckURL="
+#define PARA_KEY_NOTIFYWINDOW "NotifyWindow="
+#define PARA_KEY_NOTIFYWINDOWTITLE "NotifyWindowTitle="
+#define PARA_KEY_NOTIFYFINISH "NotifyFinish="
+#define PARA_KEY_SILENCE "Silence="
 
 // 本地保存的升级配置文件名
 #define UPDATE_CONFIG_FILENAME "UpdateConfig.ini"
