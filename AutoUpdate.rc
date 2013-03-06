@@ -1,0 +1,244 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\AutoUpdate.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\AutoUpdate.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 AutoUpdate"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "AutoUpdate 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2006 Richard Ree",IDC_STATIC,40,25,129,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_AUTOUPDATE DIALOGEX 0, 0, 248, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Start update",IDOK,55,117,62,13
+    PUSHBUTTON      "Cancel",IDCANCEL,122,117,62,13
+    LTEXT           "Ready to update.",IDC_STATIC_PROMPT,18,33,212,17
+    LTEXT           ">>>>>>>>>>>>>>>>>>>>>> 100% >>>>>>>>>>>>>>>>>>>>>>",
+                    IDC_STATIC_PROGRESS,18,51,212,8
+    LTEXT           "Total progress",IDC_STATIC_PROMPT_TOTAL_PROGRESS,18,70,
+                    212,10
+    LTEXT           ">>>>>>>>>>>>>>>>>>>>>> 100% >>>>>>>>>>>>>>>>>>>>>>",
+                    IDC_STATIC_TOTAL_PROGRESS,18,88,212,8
+END
+
+IDD_MESSAGEBOX DIALOG DISCARDABLE  0, 0, 285, 118
+STYLE DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            "",IDC_STATIC_ICON,17,35,21,20,NOT WS_VISIBLE
+    LTEXT           "提示信息",IDC_STATIC_PROMPT,47,41,209,26
+    PUSHBUTTON      "确定(&O)",IDC_BUTTON_OK,12,89,44,13,NOT WS_VISIBLE
+    PUSHBUTTON      "取消(&C)",IDC_BUTTON_CANCEL,44,89,44,13,NOT WS_VISIBLE
+    PUSHBUTTON      "跳出(&A)",IDC_BUTTON_ABORT,76,89,44,13,NOT WS_VISIBLE
+    PUSHBUTTON      "忽略(&I)",IDC_BUTTON_IGANORE,107,89,44,13,NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "重试(&R)",IDC_BUTTON_RETRY,141,89,44,13,NOT WS_VISIBLE
+    PUSHBUTTON      "继续(&C)",IDC_BUTTON_CONTINUE,172,89,44,13,NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "是(&Y)",IDC_BUTTON_YES,204,89,44,13,NOT WS_VISIBLE
+    PUSHBUTTON      "否(&N)",IDC_BUTTON_NO,232,89,44,13,NOT WS_VISIBLE
+    CONTROL         "选项1",IDC_CHECK_OPTION1,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,47,62,213,11
+    CONTROL         "选项2",IDC_CHECK_OPTION2,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,47,75,208,11
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "AutoUpdate Program\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "AutoUpdate\0"
+            VALUE "LegalCopyright", "Copyright (C) 2006 Richard Ree\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "AutoUpdate.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "AutoUpdate\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_AUTOUPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 18
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TITLEBAR            BITMAP  DISCARDABLE     "res\\title01.bmp"
+IDB_BUTTON              BITMAP  DISCARDABLE     "res\\button01.bmp"
+IDB_SYSTEM_CONTROL_BUTTON BITMAP  DISCARDABLE     "res\\button_system_control.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 AutoUpdate(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\AutoUpdate.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
