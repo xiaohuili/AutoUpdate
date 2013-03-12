@@ -7,6 +7,7 @@
 #include "UISkinManager.h"
 #include "RMessageBox.h"
 #include "AutoUpdateDlg.h"
+#include "tlhelp32.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -196,6 +197,7 @@ BOOL CAutoUpdateApp::ParseCommandLine()
 
 				if (MsgBox.m_iID == IDYES)
 				{
+					CloseProgram(m_sAppName);	// 进入升级，退出主程序，保证安全顺利升级
 					return TRUE;
 				}
 				else
@@ -330,4 +332,35 @@ BOOL CAutoUpdateApp::IsAppRunning()
 		::CreateMutex(0, FALSE, sMutex.GetBuffer(0));
 		return FALSE;
 	}
+}
+
+void CAutoUpdateApp::CloseProgram(CString strProgram)
+{
+	HANDLE handle; //定义CreateToolhelp32Snapshot系统快照句柄 
+	HANDLE handle1; //定义要结束进程句柄 
+	handle = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);//获得系统快照句柄 
+	PROCESSENTRY32 *info; //定义PROCESSENTRY32结构字指 
+	//PROCESSENTRY32 结构的 dwSize 成员设置成 sizeof(PROCESSENTRY32) 
+
+	info = new PROCESSENTRY32; 
+	info->dwSize = sizeof(PROCESSENTRY32); 
+	//调用一次 Process32First 函数，从快照中获取进程列表 
+	Process32First(handle, info); 
+	//重复调用 Process32Next，直到函数返回 FALSE 为止 
+	while(Process32Next(handle, info) != FALSE) 
+	{   
+		CString strTmp = info->szExeFile;     //指向进程名字   
+		//strcmp字符串比较函数同要结束相同   
+		//if(strcmp(c, info->szExeFile) == 0 )   
+		if (strProgram.CompareNoCase(info->szExeFile) == 0 )   
+		{   
+			//PROCESS_TERMINATE表示为结束操作打开,FALSE=可继承,info->th32ProcessID=进程ID    
+			handle1 = OpenProcess(PROCESS_TERMINATE, FALSE, info->th32ProcessID); 
+			//结束进程    
+			TerminateProcess(handle1, 0);    
+		}   
+	}
+	delete info;
+
+	CloseHandle(handle);
 }

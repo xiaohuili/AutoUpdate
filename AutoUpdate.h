@@ -90,6 +90,7 @@ private:
 	BOOL ParseCommandLine();			// 处理命令行
 	BOOL IsAppRunning();
 	BOOL CheckUpdate();					// 从软件网站下载升级配置文件，检查是否有新版本的软件可用
+	void CloseProgram(CString strProgram);
 
 private:
 	CString m_sAppName;					// 应用程序名，用以创建互斥量
