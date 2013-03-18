@@ -502,6 +502,7 @@ void CAutoUpdateDlg::OnNotifyUpdateFinish(BOOL bSuccess)
 	else if (bSuccess)
 	{
 		m_sPrompt = STRING(STR_PROMPT_UPGRADE_FINISHED, "升级完毕！");
+		m_btnCancel.SetWindowText(STRING(STR_BUTTON_SUCCESS_UPGRADE, "完成升级"));
 	}
 	else
 	{

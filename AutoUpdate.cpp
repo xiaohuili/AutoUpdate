@@ -284,39 +284,40 @@ void CAutoUpdateApp::InitStringTable(enum enLANGUAGE Language)
 	// 初始化全局字符串常量表
 
 	g_String[STR_NULL].Set("", "", "");
-	g_String[STR_AUTO_UPDATE].Set("自动升级", "笆ど", "Auto Update");
-	g_String[STR_APP_ALREADY_RUNNING].Set("升级程序已经在运行中！", "ど祘竒笲︽い", "Auto update program is already running."); //  退出应用程序；提示保存文档\n退出
+	g_String[STR_AUTO_UPDATE].Set("自动升级", "自動升級", "Auto Update");
+	g_String[STR_APP_ALREADY_RUNNING].Set("升级程序已经在运行中！", "升級程序已經在運行中", "Auto update program is already running."); //  退出应用程序；提示保存文档\n退出
 
-	g_String[STR_PROMPT_NEWER_VERSION_AVAILABLE].Set("当前有更新版本的软件可用，是否立即升级？", "讽玡Τ穝セ硁砰ノ琌ミど", "There is a newer version available. Do you want to update right now?");
-	g_String[STR_OPTION_UPGRADE_IN_BACKGROUND].Set("后台执行升级", "磅︽ど", "Run updating in background mode");
-	g_String[STR_PROMPT_UPGRADE_READY].Set("升级准备就绪。", "ど非称碞狐", "Update is ready. Please press \"Start update\" button to update.");
-	g_String[STR_PROMPT_FAIL_TO_OPEN_UPDATE_CONFIG_FILE].Set("打开升级配置文件失败，无法执行升级！", "ゴ秨ど皌竚郎ア毖礚猭磅︽ど", "Fail to open update config file. Update is canceled.");
-	g_String[STR_PROMPT_DOWNLOADING_FILE].Set("正在下载文件 %s", "タ更郎 %s", "Downloading file %s");
-	g_String[STR_TOTAL_UPGRADE_PROGRESS].Set("升级总进度 %d / %d", "ど羆秈 %d / %d", "Total progress %d / %d");
-	g_String[STR_PROMPT_FAIL_IN_DOWNLOADING_FILES].Set("下载文件 %s 失败！", "更郎 %s ア毖", "Fail in downloading file %s!");
-	g_String[STR_PROMPT_FAIL_IN_VERIFYING_FILES].Set("校验文件 %s 失败！", "喷郎 %s ア毖", "Fail in verifying file %s!");
-	g_String[STR_PROMPT_FAIL_IN_UPDATING_FILES].Set("更新文件 %s 失败！", "穝郎 %s ア毖", "Fail in updating file %s!");
-	g_String[STR_PROMPT_FAIL_IN_UPDATING].Set("升级失败！", "どア毖", "Fail in updating!");
-	g_String[STR_PROMPT_UPGRADE_FINISHED].Set("升级完毕！", "どЧ拨", "Update finished!");
+	g_String[STR_PROMPT_NEWER_VERSION_AVAILABLE].Set("当前有更新版本的软件可用，是否立即升级？", "當前有更新版本的軟件可用，是否立即升級？", "There is a newer version available. Do you want to update right now?");
+	g_String[STR_OPTION_UPGRADE_IN_BACKGROUND].Set("后台执行升级", "後臺執行升級", "Run updating in background mode");
+	g_String[STR_PROMPT_UPGRADE_READY].Set("升级准备就绪。", "升級準備就緒", "Update is ready. Please press \"Start update\" button to update.");
+	g_String[STR_PROMPT_FAIL_TO_OPEN_UPDATE_CONFIG_FILE].Set("打开升级配置文件失败，无法执行升级！", "打開升級配置文件失敗，無法執行升級！", "Fail to open update config file. Update is canceled.");
+	g_String[STR_PROMPT_DOWNLOADING_FILE].Set("正在下载文件 %s", "正在下載文件 %s", "Downloading file %s");
+	g_String[STR_TOTAL_UPGRADE_PROGRESS].Set("升级总进度 %d / %d", "升級總進度 %d / %d", "Total progress %d / %d");
+	g_String[STR_PROMPT_FAIL_IN_DOWNLOADING_FILES].Set("下载文件 %s 失败！", "下載文件 %s 失敗！", "Fail in downloading file %s!");
+	g_String[STR_PROMPT_FAIL_IN_VERIFYING_FILES].Set("校验文件 %s 失败！", "校驗文件 %s 失敗！", "Fail in verifying file %s!");
+	g_String[STR_PROMPT_FAIL_IN_UPDATING_FILES].Set("更新文件 %s 失败！", "更新文件 %s 失敗！", "Fail in updating file %s!");
+	g_String[STR_PROMPT_FAIL_IN_UPDATING].Set("升级失败！", "升級失敗！", "Fail in updating!");
+	g_String[STR_PROMPT_UPGRADE_FINISHED].Set("升级完毕！", "升級完畢！", "Update finished!");
 
-	g_String[STR_BUTTON_START_UPGRADE].Set("开始升级", "秨﹍ど", "Start update");
-	g_String[STR_BUTTON_CANCEL_UPGRADE].Set("取消升级", "ど", "Cancel");
+	g_String[STR_BUTTON_START_UPGRADE].Set("开始升级", "開始升級", "Start update");
+	g_String[STR_BUTTON_CANCEL_UPGRADE].Set("取消升级", "取消升級", "Cancel");
+	g_String[STR_BUTTON_SUCCESS_UPGRADE].Set("完成升级", "完成升級", "Success update");
 
-	g_String[STR_BUTTON_OK].Set("确定(&O)", "絋﹚(&O)", "&OK");
-	g_String[STR_BUTTON_CANCEL].Set("取消(&C)", "(&C)", "&Cancel");
-	g_String[STR_BUTTON_ABORT].Set("跳出(&A)", "铬(&A)", "&Abort");
-	g_String[STR_BUTTON_IGANORE].Set("忽略(&I)", "┛菠(&I)", "&Ignore");
-	g_String[STR_BUTTON_RETRY].Set("重试(&R)", "刚(&R)", "&Retry");
-	g_String[STR_BUTTON_CONTINUE].Set("继续(&C)", "膥尿(&C)", "&Continue");
-	g_String[STR_BUTTON_YES].Set("是(&Y)", "琌(&Y)", "&Yes");
-	g_String[STR_BUTTON_NO].Set("否(&N)", "(&N)", "&No");
-	g_String[STR_BUTTON_CLOSE].Set("关闭", "闽超", "Close");
-	g_String[STR_BUTTON_APPLY].Set("应用(&A)", "甅ノ(&A)", "&Apply");
+	g_String[STR_BUTTON_OK].Set("确定(&O)", "確定(&O)", "&OK");
+	g_String[STR_BUTTON_CANCEL].Set("取消(&C)", "取消(&C)", "&Cancel");
+	g_String[STR_BUTTON_ABORT].Set("跳出(&A)", "跳出(&A)", "&Abort");
+	g_String[STR_BUTTON_IGANORE].Set("忽略(&I)", "忽略(&I)", "&Ignore");
+	g_String[STR_BUTTON_RETRY].Set("重试(&R)", "重試(&R)", "&Retry");
+	g_String[STR_BUTTON_CONTINUE].Set("继续(&C)", "繼續(&C)", "&Continue");
+	g_String[STR_BUTTON_YES].Set("是(&Y)", "是(&Y)", "&Yes");
+	g_String[STR_BUTTON_NO].Set("否(&N)", "否(&N)", "&No");
+	g_String[STR_BUTTON_CLOSE].Set("关闭", "關閉", "Close");
+	g_String[STR_BUTTON_APPLY].Set("应用(&A)", "應用(&A)", "&Apply");
 
-	g_String[STR_OTHER].Set("其他", "ㄤ", "Other");
+	g_String[STR_OTHER].Set("其他", "其他", "Other");
 
-	g_String[STR_ERROR].Set("错误", "岿粇", "Error");
-	g_String[STR_ERROR_MESSAGE].Set("错误：%s", "岿粇%s", "Error: %s");
+	g_String[STR_ERROR].Set("错误", "錯誤", "Error");
+	g_String[STR_ERROR_MESSAGE].Set("错误：%s", "錯誤：%s", "Error: %s");
 }
 
 BOOL CAutoUpdateApp::IsAppRunning()
