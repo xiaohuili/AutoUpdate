@@ -61,6 +61,8 @@ BOOL CAutoUpdateApp::InitInstance()
 	// 处理命令行
 	if (!ParseCommandLine())
 	{
+		// 清理自绘界面
+		CUISkinManager::Uninit();
 		return FALSE;
 	}
 
@@ -210,6 +212,10 @@ BOOL CAutoUpdateApp::ParseCommandLine()
 				return FALSE;
 			}
 		}
+	}
+	else
+	{
+		return FALSE;
 	}
 
 	return TRUE;
