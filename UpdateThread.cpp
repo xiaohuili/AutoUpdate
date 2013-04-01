@@ -454,6 +454,7 @@ BOOL CUpdateThread::UpdateFile(CString &sFileSection)
 	const int BUFFER_SIZE = 512;
 	char acBuffer[BUFFER_SIZE];
 	CString sFilename;
+	CString sFileDirectoryStructure;
 	CString sDestFilename;
 	CString sBackupFilename;
 	CString sKey;
@@ -464,6 +465,13 @@ BOOL CUpdateThread::UpdateFile(CString &sFileSection)
 	GetPrivateProfileString(sFileSection.GetBuffer(0), sKey.GetBuffer(0), ""
 		, (char*)acBuffer, BUFFER_SIZE, m_sConfigFilename.GetBuffer(0));
 	sFilename = (char*)acBuffer;
+
+	// 取得子目录结构
+	sKey = "FileDirectoryStructure";
+	memset(acBuffer, 0, BUFFER_SIZE);
+	GetPrivateProfileString(sFileSection.GetBuffer(0), sKey.GetBuffer(0), ""
+		, (char*)acBuffer, BUFFER_SIZE, m_sConfigFilename.GetBuffer(0));
+	sFileDirectoryStructure = (char*)acBuffer;
 
 	// 取得目标文件名
 	sKey = "DestPath";
@@ -478,7 +486,7 @@ BOOL CUpdateThread::UpdateFile(CString &sFileSection)
 		// 无目标目录，文件无需复制
 		return TRUE;
 	}
-	sDestFilename += sFilename;
+	sDestFilename += sFileDirectoryStructure;
 
 	// 替换变量字符串为系统变量
 	sDestFilename = ResolvePath(sDestFilename.GetBuffer(0));
