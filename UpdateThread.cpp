@@ -454,7 +454,7 @@ BOOL CUpdateThread::UpdateFile(CString &sFileSection)
 	const int BUFFER_SIZE = 512;
 	char acBuffer[BUFFER_SIZE];
 	CString sFilename;
-	CString sFileDirectoryStructure;
+	CString sFileSubcatalog;
 	CString sDestFilename;
 	CString sBackupFilename;
 	CString sKey;
@@ -467,11 +467,11 @@ BOOL CUpdateThread::UpdateFile(CString &sFileSection)
 	sFilename = (char*)acBuffer;
 
 	// 取得子目录结构
-	sKey = "FileDirectoryStructure";
+	sKey = "Subcatalog";
 	memset(acBuffer, 0, BUFFER_SIZE);
 	GetPrivateProfileString(sFileSection.GetBuffer(0), sKey.GetBuffer(0), ""
 		, (char*)acBuffer, BUFFER_SIZE, m_sConfigFilename.GetBuffer(0));
-	sFileDirectoryStructure = (char*)acBuffer;
+	sFileSubcatalog = (char*)acBuffer;
 
 	// 取得目标文件名
 	sKey = "DestPath";
@@ -486,7 +486,7 @@ BOOL CUpdateThread::UpdateFile(CString &sFileSection)
 		// 无目标目录，文件无需复制
 		return TRUE;
 	}
-	sDestFilename += sFileDirectoryStructure;
+	sDestFilename += sFileSubcatalog + sFilename;
 
 	// 替换变量字符串为系统变量
 	sDestFilename = ResolvePath(sDestFilename.GetBuffer(0));
@@ -512,6 +512,13 @@ BOOL CUpdateThread::UpdateFile(CString &sFileSection)
 		{
 			MoveFile(sDestFilename.GetBuffer(0), sBackupFilename.GetBuffer(0));
 		}
+	}
+
+	// 如果输出目录在子目录中，则创建对应的目录结构
+	if (sFileSubcatalog!="")
+	{
+		CString csTemp = sFileSubcatalog.Left(strlen(sFileSubcatalog)-1);
+		CreateDirectory(GetAppDirectory() + csTemp, NULL);
 	}
 
 	// 复制新文件
